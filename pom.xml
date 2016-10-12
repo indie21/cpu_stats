@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.mycompany.app</groupId>
   <artifactId>cpu_stats</artifactId>
@@ -8,6 +8,12 @@
   <name>cpu_stats</name>
   <url>http://maven.apache.org</url>
   <dependencies>
+    <dependency>
+      <groupId>com.timgroup</groupId>
+      <artifactId>java-statsd-client</artifactId>
+      <version>3.0.1</version>
+    </dependency>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
