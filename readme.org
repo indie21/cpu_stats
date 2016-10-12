@@ -1,0 +1,2 @@
+mvn clean package
+java -cp target/cpu_stats-1.0-SNAPSHOT.jar  com.mycompany.app.App
