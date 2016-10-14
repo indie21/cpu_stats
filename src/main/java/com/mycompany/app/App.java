@@ -14,14 +14,14 @@ public class App
     //private static final StatsDClient statsd = new NonBlockingStatsDClient("my.prefix", "statsd-host", 8125);
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
-        timer = new Timer();
-        timer.schedule(new StatsdTask(), 0, 3 * 1000);
+        showLibraryPath();
 
-        // statsd.incrementCounter("bar");
-        // statsd.recordGaugeValue("baz", 100);
-        // statsd.recordExecutionTime("bag", 25);
-        // statsd.recordSetEvent("qux", "one");
+
+    }
+
+    public static void showLibraryPath() {
+        String path = System.getProperty("java.library.path");
+        System.out.print("java.library.path is:" + path);
     }
 
 

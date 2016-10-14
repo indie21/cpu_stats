@@ -16,7 +16,7 @@ import org.hyperic.sigar.Who;
 import java.util.TimerTask;
 
 
-public class StatsdTask extends TimerTask {
+public class SigarDemo extends TimerTask {
 
     private void cpu() throws SigarException {
 
@@ -45,7 +45,6 @@ public class StatsdTask extends TimerTask {
         System.out.println("CPU当前空闲率:    " + CpuPerc.format(cpu.getIdle()));// 当前空闲率
         System.out.println("CPU总的使用率:    " + CpuPerc.format(cpu.getCombined()));// 总的使用率
     }
-
 
     public void run() {
         System.out.println("Time's up!!!!");
