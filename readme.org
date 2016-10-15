@@ -1,3 +1,8 @@
+使用 sigar统计cpu使用率。
+
+
+#+begin_src sh
 mvn clean package
 java -cp target/cpu_stats-1.0-SNAPSHOT.jar  com.mycompany.app.App
+#+end_src
 
