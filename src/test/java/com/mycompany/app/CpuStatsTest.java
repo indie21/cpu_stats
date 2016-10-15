@@ -16,4 +16,5 @@ public class CpuStatsTest extends TestCase
         System.out.println("cpu 使用率:");
         System.out.println(util);
     }
+
 }
