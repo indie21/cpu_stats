@@ -17,7 +17,7 @@ public class StatsdDemo {
             statsd.recordSetEvent("qux", "one");
         }
 
-        System.out.println("statsd end....");
+          System.out.println("statsd end....");
 
 
     }

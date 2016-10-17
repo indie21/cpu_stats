@@ -12,7 +12,7 @@ public class StatsdTask extends TimerTask {
     private StatsDClient statsd;
 
     public StatsdTask() {
-        statsd = new NonBlockingStatsDClient("cpu", "cando-v3-zhuoyikang.hzv.tenxapp.com", 59058);
+        statsd = new NonBlockingStatsDClient("cpu", "cando-v4-zhuoyikang.hzv.tenxapp.com", 39378);
     }
 
     public void run() {
@@ -22,5 +22,6 @@ public class StatsdTask extends TimerTask {
         long util = (long)(utild*100);
         System.out.printf("%s: cpu utilization:%d\n", time, util);
         statsd.recordGaugeValue("baz", util);
+        statsd.recordGaugeValue("top", 100);
     }
 }
