@@ -12,7 +12,9 @@ public class StatsdTask extends TimerTask {
     private StatsDClient statsd;
 
     public StatsdTask() {
-        statsd = new NonBlockingStatsDClient("cpu", "cando-v4-zhuoyikang.hzv.tenxapp.com", 39378);
+        statsd = new NonBlockingStatsDClient(Config.config.getIdentity(),
+                                             Config.config.getStastdHost(),
+                                             Config.config.getStastdPort());
     }
 
     public void run() {
