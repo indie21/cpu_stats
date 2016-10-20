@@ -6,7 +6,9 @@ mvn clean package
 java -cp target/cpu_stats-1.0-SNAPSHOT.jar  com.mycompany.app.App
 #+end_src
 
-java -jar target/cpu_stats-1.0-SNAPSHOT.jar cando-v4-zhuoyikang.hzv.tenxapp.com 39378 macBookPro
+java -Djava.library.path=target/lib -jar target/cpu_stats-1.0-SNAPSHOT.jar cando-v4-zhuoyikang.hzv.tenxapp.com 39378 macBookProw
+
+java -Djava.library.path=lib -jar cpu_stats-1.0-SNAPSHOT.jar cando-v4-zhuoyikang.hzv.tenxapp.com 39378 macBookProw
 
 
 如何设置windowsbat开启启动
