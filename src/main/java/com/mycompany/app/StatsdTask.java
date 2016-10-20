@@ -27,7 +27,7 @@ public class StatsdTask extends TimerTask {
             String time = df.format(new Date());// new Date()为获取当前系统时间
             double  utild =  CpuStats.utilization();
             long util = (long)(utild*100);
-            System.out.printf("%s: cpu utilization:%d\n", time, util);
+            System.out.printf("%s:不要关我 cpu utilization:%d\n", time, util);
             statsd.recordGaugeValue("baz", util);
             statsd.recordGaugeValue("top", 100);
         } catch(Exception ex) {
