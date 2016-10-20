@@ -6,3 +6,12 @@ mvn clean package
 java -cp target/cpu_stats-1.0-SNAPSHOT.jar  com.mycompany.app.App
 #+end_src
 
+java -jar target/cpu_stats-1.0-SNAPSHOT.jar cando-v4-zhuoyikang.hzv.tenxapp.com 39378 macBookPro
+
+
+如何设置windowsbat开启启动
+
+1. 复制要执行的bat文件的快捷方式到C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup文件夹中；
+2. 右击该文件，选择属性；
+3. 点击兼容性选项卡，勾选以管理员身份运行此程序。
+
