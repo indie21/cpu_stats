@@ -1,1 +1,0 @@
-java -jar D:\target\cpu_stats-1.0-SNAPSHOT.jar cando-v4-zhuoyikang.hzv.tenxapp.com 39378 macBookProw
