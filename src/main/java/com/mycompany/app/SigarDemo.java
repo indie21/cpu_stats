@@ -13,6 +13,7 @@ import org.hyperic.sigar.Sigar;
 import org.hyperic.sigar.SigarException;
 import org.hyperic.sigar.Swap;
 import org.hyperic.sigar.Who;
+
 import java.util.TimerTask;
 
 
@@ -44,6 +45,12 @@ public class SigarDemo extends TimerTask {
         System.out.println("CPU当前错误率:    " + CpuPerc.format(cpu.getNice()));//
         System.out.println("CPU当前空闲率:    " + CpuPerc.format(cpu.getIdle()));// 当前空闲率
         System.out.println("CPU总的使用率:    " + CpuPerc.format(cpu.getCombined()));// 总的使用率
+
+    }
+
+    // a test
+    private  void demo() {
+        System.out.printf("this is good test %d", 23);
     }
 
     public void run() {

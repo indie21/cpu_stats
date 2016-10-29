@@ -12,17 +12,17 @@ public class StatsdTask extends TimerTask {
     private StatsDClient statsd;
 
     public StatsdTask() {
-        // statsd = new NonBlockingStatsDClient(Config.config.getIdentity(),
-        //                                      Config.config.getStastdHost(),
-        //                                      Config.config.getStastdPort());
+        statsd = new NonBlockingStatsDClient(Config.config.getIdentity(),
+                                             Config.config.getStastdHost(),
+                                             Config.config.getStastdPort()); 
     }
 
     public void run() {
 
         try {
-            StatsDClient statsd = new NonBlockingStatsDClient(Config.config.getIdentity(),
-                                                              Config.config.getStastdHost(),
-                                                              Config.config.getStastdPort());
+            // StatsDClient statsd = new NonBlockingStatsDClient(Config.config.getIdentity(),
+            //                                                   Config.config.getStastdHost(),
+            //                                                   Config.config.getStastdPort());
             SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置日期格式
             String time = df.format(new Date());// new Date()为获取当前系统时间
             double  utild =  CpuStats.utilization();

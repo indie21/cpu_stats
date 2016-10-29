@@ -4,16 +4,19 @@
 #+begin_src sh
 mvn clean package
 java -cp target/cpu_stats-1.0-SNAPSHOT.jar  com.mycompany.app.App
+java -Djava.library.path=target/lib -jar target/cpu_stats-1.0-SNAPSHOT.jar cando-v4-zhuoyikang.hzv.tenxapp.com 39378 macBookProw
+java -Djava.library.path=lib -jar cpu_stats-1.0-SNAPSHOT.jar cando-v4-zhuoyikang.hzv.tenxapp.com 39378 macBookProw
 #+end_src
 
-java -Djava.library.path=target/lib -jar target/cpu_stats-1.0-SNAPSHOT.jar cando-v4-zhuoyikang.hzv.tenxapp.com 39378 macBookProw
 
-java -Djava.library.path=lib -jar cpu_stats-1.0-SNAPSHOT.jar cando-v4-zhuoyikang.hzv.tenxapp.com 39378 macBookProw
+* 如何设置开启启动
 
+** windows
 
-如何设置windowsbat开启启动
+   1. 复制要执行的bat文件的快捷方式到C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup文件夹中；
+   2. 右击该文件，选择属性；
+   3. 点击兼容性选项卡，勾选以管理员身份运行此程序。
 
-1. 复制要执行的bat文件的快捷方式到C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup文件夹中；
-2. 右击该文件，选择属性；
-3. 点击兼容性选项卡，勾选以管理员身份运行此程序。
+** ubuntu
 
+   这个时候我们需要在/etc下编辑一个叫rc.local 的文件，需要root权限。在终端先su获取root权限如果你有root帐号的话，然后 vim /etc/rc.local 编辑，在最下面输入 nohup bash /home/dl.sh>/home/d.txt & 保存。
